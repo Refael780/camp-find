@@ -1,0 +1,89 @@
+<% include ../partials/header.ejs%>
+
+<style>
+
+body{
+    background: url("https://images.unsplash.com/photo-1486915309851-b0cc1f8a0084?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80");
+    background-size: cover;
+    background-position: center;
+}
+    
+ h1 {
+    display: block;
+    font-size: 28px;
+    margin: 0;
+    font-weight: 100;
+    color: var(--color-gray);
+    font-family: 'Chilanka', cursive;
+
+}
+.jumbotron {
+    background-color: #337ab7;
+    margin: 60px auto;
+    color: #ffffff;
+    opacity: 0.93;
+
+}
+.form-control{
+    width: 60%;
+    font-family: 'Chilanka', cursive;
+    height: 45px;
+
+
+} 
+
+label{
+    font-family: 'Chilanka', cursive;
+  font-size: 30px;
+  color: #ffffff;
+
+}
+button{
+    font-family: 'Chilanka', cursive;
+    font-size: 80px;
+    text-align: center;
+    margin: 0 450px;
+    /* width: 60%; */
+    width: 30%;
+    /* align-items: center; */
+    text-align: center;
+}
+
+</style>
+
+
+   <div class="jumbotron">
+        <div class="container">
+             <h1>Create a New Campgrounds</h1>
+        </div>
+        </div> 
+    </div>
+<div class="container">
+    <form  action="/campgrounds" method="post" class="form-horizontal">
+            <div class="form-group">
+              <label for="inputName" class="col-sm-4 control-label">Name</label>
+              <div class="col-sm-8">
+                <input type="text" placeholder="name" name="name" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputImage" class="col-sm-4 control-label">image</label>
+              <div class="col-sm-8">
+                <input type="text" placeholder="image" name="image" class="form-control" id="inputImage">
+              </div>
+            </div>
+               <div class="form-group">
+                    <label for="inputComment" class="col-sm-4 control-label">description</label>
+                    <div class="col-sm-8">
+                      <input type="text"  name="description" class="form-control" id="inputComment">
+                    </div>
+                  </div>
+            <div class="form-group">
+                 <button class="btn btn-primary btn-lg ">Submit</button>
+            </div>
+            </form>
+
+
+
+</div>
+<% include ../partials/footer%>
